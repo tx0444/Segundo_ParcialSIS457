@@ -16,6 +16,7 @@
     <EntitySetMapping Name="Progama">
       <EntityTypeMapping TypeName="Parcial2KrbaModel.Progama">
         <MappingFragment StoreEntitySet="Progama">
+          <ScalarProperty Name="idCategoriaPrograma" ColumnName="idCategoriaPrograma" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="idCanal" ColumnName="idCanal" />
           <ScalarProperty Name="titulo" ColumnName="titulo" />
@@ -46,5 +47,14 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <EntitySetMapping Name="CategoriaPrograma">
+      <EntityTypeMapping TypeName="Parcial2KrbaModel.CategoriaPrograma">
+        <MappingFragment StoreEntitySet="CategoriaPrograma">
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

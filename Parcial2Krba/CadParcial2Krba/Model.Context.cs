@@ -29,6 +29,7 @@ namespace CadParcial2Krba
     
         public virtual DbSet<Canal> Canal { get; set; }
         public virtual DbSet<Progama> Progama { get; set; }
+        public virtual DbSet<CategoriaPrograma> CategoriaPrograma { get; set; }
     
         public virtual ObjectResult<paProgamaListar_Result> paProgamaListar(string parametro)
         {
@@ -40,4 +41,3 @@ namespace CadParcial2Krba
         }
     }
 }
-

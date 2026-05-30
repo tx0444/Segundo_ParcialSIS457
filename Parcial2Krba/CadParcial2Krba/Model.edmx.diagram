@@ -8,6 +8,8 @@
         <EntityTypeShape EntityType="Parcial2KrbaModel.Canal" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="Parcial2KrbaModel.Progama" Width="1.5" PointX="3.75" PointY="1.375" IsExpanded="true" />
         <AssociationConnector Association="Parcial2KrbaModel.fk_Progama_Canal" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Parcial2KrbaModel.CategoriaPrograma" Width="1.5" PointX="6.625" PointY="1.5" />
+        <AssociationConnector Association="Parcial2KrbaModel.fk_Progama_Categoria" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

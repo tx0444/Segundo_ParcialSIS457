@@ -27,6 +27,8 @@
     <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="estado" Type="Int16" Nullable="false" />
     <NavigationProperty Name="Canal" Relationship="Self.fk_Progama_Canal" FromRole="Progama" ToRole="Canal" />
+    <Property Name="idCategoriaPrograma" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CategoriaPrograma" Relationship="Parcial2KrbaModel.fk_Progama_Categoria" FromRole="Progama" ToRole="CategoriaPrograma" />
   </EntityType>
   <Association Name="fk_Progama_Canal">
     <End Role="Canal" Type="Self.Canal" Multiplicity="1" />
@@ -50,6 +52,11 @@
     <FunctionImport Name="paProgamaListar" ReturnType="Collection(Parcial2KrbaModel.paProgamaListar_Result)">
       <Parameter Name="parametro" Mode="In" Type="String" />
     </FunctionImport>
+    <EntitySet Name="CategoriaPrograma" EntityType="Parcial2KrbaModel.CategoriaPrograma" />
+    <AssociationSet Name="fk_Progama_Categoria" Association="Parcial2KrbaModel.fk_Progama_Categoria">
+      <End Role="CategoriaPrograma" EntitySet="CategoriaPrograma" />
+      <End Role="Progama" EntitySet="Progama" />
+    </AssociationSet>
   </EntityContainer>
   <ComplexType Name="paProgamaListar_Result">
     <Property Type="Int32" Name="id" Nullable="false" />
@@ -64,4 +71,25 @@
     <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
     <Property Type="Int16" Name="estado" Nullable="false" />
   </ComplexType>
+  <EntityType Name="CategoriaPrograma">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="estado" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="Progama" Relationship="Parcial2KrbaModel.fk_Progama_Categoria" FromRole="CategoriaPrograma" ToRole="Progama" />
+  </EntityType>
+  <Association Name="fk_Progama_Categoria">
+    <End Type="Parcial2KrbaModel.CategoriaPrograma" Role="CategoriaPrograma" Multiplicity="1" />
+    <End Type="Parcial2KrbaModel.Progama" Role="Progama" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CategoriaPrograma">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Progama">
+        <PropertyRef Name="idCategoriaPrograma" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

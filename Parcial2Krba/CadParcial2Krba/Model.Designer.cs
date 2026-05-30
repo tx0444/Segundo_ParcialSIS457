@@ -1,4 +1,4 @@
-﻿// La generación de código T4 está habilitada para el modelo 'C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\CadParcial2Krba\Model.edmx'. 
+﻿// La generación de código T4 está habilitada para el modelo 'C:\Users\Tx098\Desktop\457\Segundo parcial Sis 457 krba\Parcial2Krba\CadParcial2Krba\Model.edmx'. 
 // Para habilitar la generación de código heredada, cambie el valor de la propiedad del diseñador 'Estrategia de generación de código'
 // por 'ObjectContext heredado'. Esta propiedad está disponible en la ventana Propiedades cuando se abre
 // el modelo en el diseñador.

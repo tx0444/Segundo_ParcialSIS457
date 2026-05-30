@@ -40,14 +40,17 @@
             this.nudDuracion = new System.Windows.Forms.NumericUpDown();
             this.lblDuracion = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.cbxCategoria = new System.Windows.Forms.ComboBox();
             this.cbxCanal = new System.Windows.Forms.ComboBox();
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
+            this.lblCategoria = new System.Windows.Forms.Label();
             this.lblTituloProgama = new System.Windows.Forms.Label();
             this.lblCanal = new System.Windows.Forms.Label();
             this.erpTitulo = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpDescripcion = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpCanal = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpCategoria = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpDuracion = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpProductor = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnlEncabezado.SuspendLayout();
@@ -61,29 +64,30 @@
             ((System.ComponentModel.ISupportInitialize)(this.erpTitulo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpDescripcion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpCanal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpCategoria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpDuracion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpProductor)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlEncabezado
             // 
-            this.pnlEncabezado.BackColor = System.Drawing.Color.FromArgb(45, 55, 72);
+            this.pnlEncabezado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
             this.pnlEncabezado.Controls.Add(this.lblSubtitulo);
             this.pnlEncabezado.Controls.Add(this.lblTitulo);
             this.pnlEncabezado.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlEncabezado.Location = new System.Drawing.Point(0, 0);
             this.pnlEncabezado.Name = "pnlEncabezado";
-            this.pnlEncabezado.Size = new System.Drawing.Size(1184, 82);
+            this.pnlEncabezado.Size = new System.Drawing.Size(1237, 82);
             this.pnlEncabezado.TabIndex = 0;
             // 
             // lblSubtitulo
             // 
             this.lblSubtitulo.AutoSize = true;
             this.lblSubtitulo.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.lblSubtitulo.ForeColor = System.Drawing.Color.FromArgb(226, 232, 240);
+            this.lblSubtitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
             this.lblSubtitulo.Location = new System.Drawing.Point(25, 48);
             this.lblSubtitulo.Name = "lblSubtitulo";
-            this.lblSubtitulo.Size = new System.Drawing.Size(341, 17);
+            this.lblSubtitulo.Size = new System.Drawing.Size(482, 25);
             this.lblSubtitulo.TabIndex = 1;
             this.lblSubtitulo.Text = "Gestion de programas de television y eliminacion logica";
             // 
@@ -94,7 +98,7 @@
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
             this.lblTitulo.Location = new System.Drawing.Point(22, 14);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(126, 32);
+            this.lblTitulo.Size = new System.Drawing.Size(187, 48);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Progamas";
             // 
@@ -111,15 +115,18 @@
             // 
             // dgvLista
             // 
+            this.dgvLista.ColumnHeadersHeight = 34;
             this.dgvLista.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvLista.Location = new System.Drawing.Point(0, 72);
             this.dgvLista.Name = "dgvLista";
+            this.dgvLista.RowHeadersWidth = 62;
             this.dgvLista.Size = new System.Drawing.Size(770, 400);
             this.dgvLista.TabIndex = 2;
+            this.dgvLista.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLista_CellContentClick);
             // 
             // pnlAcciones
             // 
-            this.pnlAcciones.BackColor = System.Drawing.Color.FromArgb(248, 250, 252);
+            this.pnlAcciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.pnlAcciones.Controls.Add(this.btnCerrar);
             this.pnlAcciones.Controls.Add(this.btnEliminar);
             this.pnlAcciones.Controls.Add(this.btnEditar);
@@ -148,7 +155,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(220, 53, 69);
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
@@ -163,7 +170,7 @@
             // btnEditar
             // 
             this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(52, 144, 220);
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(144)))), ((int)(((byte)(220)))));
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnEditar.ForeColor = System.Drawing.Color.White;
@@ -178,7 +185,7 @@
             // btnNuevo
             // 
             this.btnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(40, 167, 69);
+            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnNuevo.ForeColor = System.Drawing.Color.White;
@@ -194,10 +201,10 @@
             // 
             this.lblResumen.AutoSize = true;
             this.lblResumen.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lblResumen.ForeColor = System.Drawing.Color.FromArgb(74, 85, 104);
+            this.lblResumen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(85)))), ((int)(((byte)(104)))));
             this.lblResumen.Location = new System.Drawing.Point(16, 21);
             this.lblResumen.Name = "lblResumen";
-            this.lblResumen.Size = new System.Drawing.Size(128, 15);
+            this.lblResumen.Size = new System.Drawing.Size(189, 25);
             this.lblResumen.TabIndex = 0;
             this.lblResumen.Text = "Registros encontrados";
             // 
@@ -216,7 +223,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(45, 55, 72);
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
@@ -236,7 +243,7 @@
             this.txtParametro.Location = new System.Drawing.Point(18, 33);
             this.txtParametro.MaxLength = 50;
             this.txtParametro.Name = "txtParametro";
-            this.txtParametro.Size = new System.Drawing.Size(636, 25);
+            this.txtParametro.Size = new System.Drawing.Size(636, 34);
             this.txtParametro.TabIndex = 1;
             this.txtParametro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtParametro_KeyPress);
             // 
@@ -244,10 +251,10 @@
             // 
             this.lblParametro.AutoSize = true;
             this.lblParametro.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lblParametro.ForeColor = System.Drawing.Color.FromArgb(74, 85, 104);
+            this.lblParametro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(85)))), ((int)(((byte)(104)))));
             this.lblParametro.Location = new System.Drawing.Point(15, 14);
             this.lblParametro.Name = "lblParametro";
-            this.lblParametro.Size = new System.Drawing.Size(180, 15);
+            this.lblParametro.Size = new System.Drawing.Size(292, 25);
             this.lblParametro.TabIndex = 0;
             this.lblParametro.Text = "Buscar por titulo, canal o productor";
             // 
@@ -272,9 +279,11 @@
             this.gbxDatos.Controls.Add(this.nudDuracion);
             this.gbxDatos.Controls.Add(this.lblDuracion);
             this.gbxDatos.Controls.Add(this.txtDescripcion);
+            this.gbxDatos.Controls.Add(this.cbxCategoria);
             this.gbxDatos.Controls.Add(this.cbxCanal);
             this.gbxDatos.Controls.Add(this.txtTitulo);
             this.gbxDatos.Controls.Add(this.lblDescripcion);
+            this.gbxDatos.Controls.Add(this.lblCategoria);
             this.gbxDatos.Controls.Add(this.lblTituloProgama);
             this.gbxDatos.Controls.Add(this.lblCanal);
             this.gbxDatos.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -288,44 +297,44 @@
             // 
             this.lblFormularioTitulo.AutoSize = true;
             this.lblFormularioTitulo.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.lblFormularioTitulo.ForeColor = System.Drawing.Color.FromArgb(45, 55, 72);
+            this.lblFormularioTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
             this.lblFormularioTitulo.Location = new System.Drawing.Point(18, 22);
             this.lblFormularioTitulo.Name = "lblFormularioTitulo";
-            this.lblFormularioTitulo.Size = new System.Drawing.Size(150, 25);
+            this.lblFormularioTitulo.Size = new System.Drawing.Size(229, 38);
             this.lblFormularioTitulo.TabIndex = 14;
             this.lblFormularioTitulo.Text = "Nuevo progama";
             // 
             // dtpFechaEstreno
             // 
             this.dtpFechaEstreno.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaEstreno.Location = new System.Drawing.Point(22, 366);
+            this.dtpFechaEstreno.Location = new System.Drawing.Point(22, 393);
             this.dtpFechaEstreno.Name = "dtpFechaEstreno";
-            this.dtpFechaEstreno.Size = new System.Drawing.Size(285, 23);
-            this.dtpFechaEstreno.TabIndex = 5;
+            this.dtpFechaEstreno.Size = new System.Drawing.Size(285, 31);
+            this.dtpFechaEstreno.TabIndex = 6;
             // 
             // txtProductor
             // 
-            this.txtProductor.Location = new System.Drawing.Point(22, 313);
+            this.txtProductor.Location = new System.Drawing.Point(22, 344);
             this.txtProductor.MaxLength = 100;
             this.txtProductor.Name = "txtProductor";
-            this.txtProductor.Size = new System.Drawing.Size(285, 23);
-            this.txtProductor.TabIndex = 4;
+            this.txtProductor.Size = new System.Drawing.Size(285, 31);
+            this.txtProductor.TabIndex = 5;
             // 
             // lblFechaEstreno
             // 
             this.lblFechaEstreno.AutoSize = true;
-            this.lblFechaEstreno.Location = new System.Drawing.Point(19, 348);
+            this.lblFechaEstreno.Location = new System.Drawing.Point(19, 375);
             this.lblFechaEstreno.Name = "lblFechaEstreno";
-            this.lblFechaEstreno.Size = new System.Drawing.Size(82, 15);
+            this.lblFechaEstreno.Size = new System.Drawing.Size(121, 25);
             this.lblFechaEstreno.TabIndex = 13;
             this.lblFechaEstreno.Text = "Fecha estreno";
             // 
             // lblProductor
             // 
             this.lblProductor.AutoSize = true;
-            this.lblProductor.Location = new System.Drawing.Point(19, 295);
+            this.lblProductor.Location = new System.Drawing.Point(19, 326);
             this.lblProductor.Name = "lblProductor";
-            this.lblProductor.Size = new System.Drawing.Size(61, 15);
+            this.lblProductor.Size = new System.Drawing.Size(91, 25);
             this.lblProductor.TabIndex = 12;
             this.lblProductor.Text = "Productor";
             // 
@@ -334,55 +343,76 @@
             this.btnCancelar.BackColor = System.Drawing.Color.White;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnCancelar.Location = new System.Drawing.Point(171, 436);
+            this.btnCancelar.Location = new System.Drawing.Point(171, 448);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(136, 36);
-            this.btnCancelar.TabIndex = 7;
+            this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(40, 167, 69);
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(22, 436);
+            this.btnGuardar.Location = new System.Drawing.Point(22, 448);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(136, 36);
-            this.btnGuardar.TabIndex = 6;
+            this.btnGuardar.TabIndex = 7;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // nudDuracion
             // 
-            this.nudDuracion.Location = new System.Drawing.Point(22, 260);
-            this.nudDuracion.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
-            this.nudDuracion.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            this.nudDuracion.Location = new System.Drawing.Point(22, 295);
+            this.nudDuracion.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudDuracion.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nudDuracion.Name = "nudDuracion";
-            this.nudDuracion.Size = new System.Drawing.Size(285, 23);
-            this.nudDuracion.TabIndex = 3;
-            this.nudDuracion.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            this.nudDuracion.Size = new System.Drawing.Size(285, 31);
+            this.nudDuracion.TabIndex = 4;
+            this.nudDuracion.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // lblDuracion
             // 
             this.lblDuracion.AutoSize = true;
-            this.lblDuracion.Location = new System.Drawing.Point(19, 242);
+            this.lblDuracion.Location = new System.Drawing.Point(19, 277);
             this.lblDuracion.Name = "lblDuracion";
-            this.lblDuracion.Size = new System.Drawing.Size(104, 15);
+            this.lblDuracion.Size = new System.Drawing.Size(153, 25);
             this.lblDuracion.TabIndex = 8;
             this.lblDuracion.Text = "Duracion minutos";
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(22, 166);
+            this.txtDescripcion.Location = new System.Drawing.Point(22, 219);
             this.txtDescripcion.MaxLength = 250;
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(285, 61);
-            this.txtDescripcion.TabIndex = 2;
+            this.txtDescripcion.Size = new System.Drawing.Size(285, 45);
+            this.txtDescripcion.TabIndex = 3;
+            // 
+            // cbxCategoria
+            // 
+            this.cbxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCategoria.FormattingEnabled = true;
+            this.cbxCategoria.Location = new System.Drawing.Point(22, 166);
+            this.cbxCategoria.Name = "cbxCategoria";
+            this.cbxCategoria.Size = new System.Drawing.Size(285, 33);
+            this.cbxCategoria.TabIndex = 2;
             // 
             // cbxCanal
             // 
@@ -390,7 +420,7 @@
             this.cbxCanal.FormattingEnabled = true;
             this.cbxCanal.Location = new System.Drawing.Point(22, 113);
             this.cbxCanal.Name = "cbxCanal";
-            this.cbxCanal.Size = new System.Drawing.Size(285, 23);
+            this.cbxCanal.Size = new System.Drawing.Size(285, 33);
             this.cbxCanal.TabIndex = 1;
             // 
             // txtTitulo
@@ -398,24 +428,33 @@
             this.txtTitulo.Location = new System.Drawing.Point(22, 60);
             this.txtTitulo.MaxLength = 100;
             this.txtTitulo.Name = "txtTitulo";
-            this.txtTitulo.Size = new System.Drawing.Size(285, 23);
+            this.txtTitulo.Size = new System.Drawing.Size(285, 31);
             this.txtTitulo.TabIndex = 0;
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(19, 148);
+            this.lblDescripcion.Location = new System.Drawing.Point(19, 201);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(69, 15);
+            this.lblDescripcion.Size = new System.Drawing.Size(104, 25);
             this.lblDescripcion.TabIndex = 2;
             this.lblDescripcion.Text = "Descripcion";
+            // 
+            // lblCategoria
+            // 
+            this.lblCategoria.AutoSize = true;
+            this.lblCategoria.Location = new System.Drawing.Point(19, 148);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(88, 25);
+            this.lblCategoria.TabIndex = 15;
+            this.lblCategoria.Text = "Categoria";
             // 
             // lblTituloProgama
             // 
             this.lblTituloProgama.AutoSize = true;
             this.lblTituloProgama.Location = new System.Drawing.Point(19, 42);
             this.lblTituloProgama.Name = "lblTituloProgama";
-            this.lblTituloProgama.Size = new System.Drawing.Size(37, 15);
+            this.lblTituloProgama.Size = new System.Drawing.Size(56, 25);
             this.lblTituloProgama.TabIndex = 1;
             this.lblTituloProgama.Text = "Titulo";
             // 
@@ -424,16 +463,40 @@
             this.lblCanal.AutoSize = true;
             this.lblCanal.Location = new System.Drawing.Point(19, 95);
             this.lblCanal.Name = "lblCanal";
-            this.lblCanal.Size = new System.Drawing.Size(38, 15);
+            this.lblCanal.Size = new System.Drawing.Size(55, 25);
             this.lblCanal.TabIndex = 0;
             this.lblCanal.Text = "Canal";
             // 
+            // erpTitulo
+            // 
+            this.erpTitulo.ContainerControl = this;
+            // 
+            // erpDescripcion
+            // 
+            this.erpDescripcion.ContainerControl = this;
+            // 
+            // erpCanal
+            // 
+            this.erpCanal.ContainerControl = this;
+            // 
+            // erpCategoria
+            // 
+            this.erpCategoria.ContainerControl = this;
+            // 
+            // erpDuracion
+            // 
+            this.erpDuracion.ContainerControl = this;
+            // 
+            // erpProductor
+            // 
+            this.erpProductor.ContainerControl = this;
+            // 
             // FrmProgama
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(241, 245, 249);
-            this.ClientSize = new System.Drawing.Size(1184, 651);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            this.ClientSize = new System.Drawing.Size(1237, 662);
             this.Controls.Add(this.pnlFormulario);
             this.Controls.Add(this.pnlListado);
             this.Controls.Add(this.pnlEncabezado);
@@ -459,9 +522,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.erpTitulo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpDescripcion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpCanal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpCategoria)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpDuracion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpProductor)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         private System.Windows.Forms.Panel pnlEncabezado;
@@ -491,14 +556,17 @@
         private System.Windows.Forms.NumericUpDown nudDuracion;
         private System.Windows.Forms.Label lblDuracion;
         private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.ComboBox cbxCategoria;
         private System.Windows.Forms.ComboBox cbxCanal;
         private System.Windows.Forms.TextBox txtTitulo;
         private System.Windows.Forms.Label lblDescripcion;
+        private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.Label lblTituloProgama;
         private System.Windows.Forms.Label lblCanal;
         private System.Windows.Forms.ErrorProvider erpTitulo;
         private System.Windows.Forms.ErrorProvider erpDescripcion;
         private System.Windows.Forms.ErrorProvider erpCanal;
+        private System.Windows.Forms.ErrorProvider erpCategoria;
         private System.Windows.Forms.ErrorProvider erpDuracion;
         private System.Windows.Forms.ErrorProvider erpProductor;
     }

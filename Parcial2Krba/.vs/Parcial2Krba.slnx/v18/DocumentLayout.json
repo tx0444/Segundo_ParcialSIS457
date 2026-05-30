@@ -1,10 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Tx098\\Desktop\\Mi resplado\\Segundo parcial Sis 457 krba\\Parcial2Krba\\",
+  "WorkspaceRootPath": "C:\\Users\\Tx098\\Desktop\\457\\Segundo parcial Sis 457 krba\\Parcial2Krba\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2F5B96A1-4A36-4764-B57E-9D081E3BC16B}|CpParcial2Krba\\CpParcial2Krba.csproj|c:\\users\\tx098\\desktop\\mi resplado\\segundo parcial sis 457 krba\\parcial2krba\\cpparcial2krba\\frmprogama.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{2F5B96A1-4A36-4764-B57E-9D081E3BC16B}|CpParcial2Krba\\CpParcial2Krba.csproj|C:\\Users\\Tx098\\Desktop\\457\\Segundo parcial Sis 457 krba\\Parcial2Krba\\cpparcial2krba\\frmprogama.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F5B96A1-4A36-4764-B57E-9D081E3BC16B}|CpParcial2Krba\\CpParcial2Krba.csproj|solutionrelative:cpparcial2krba\\frmprogama.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F5B96A1-4A36-4764-B57E-9D081E3BC16B}|CpParcial2Krba\\CpParcial2Krba.csproj|c:\\users\\tx098\\desktop\\457\\segundo parcial sis 457 krba\\parcial2krba\\cpparcial2krba\\frmprogama.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2F5B96A1-4A36-4764-B57E-9D081E3BC16B}|CpParcial2Krba\\CpParcial2Krba.csproj|solutionrelative:cpparcial2krba\\frmprogama.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8424FB70-8B25-4268-B80D-C49CBD0B8716}|CadParcial2Krba\\CadParcial2Krba.csproj|C:\\Users\\Tx098\\Desktop\\457\\Segundo parcial Sis 457 krba\\Parcial2Krba\\cadparcial2krba\\model.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{8424FB70-8B25-4268-B80D-C49CBD0B8716}|CadParcial2Krba\\CadParcial2Krba.csproj|solutionrelative:cadparcial2krba\\model.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Tx098\\Desktop\\457\\Segundo parcial Sis 457 krba\\Parcial2Krba.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,13 +30,48 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FrmProgama.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Tx098\\Desktop\\Mi resplado\\Segundo parcial Sis 457 krba\\Parcial2Krba\\CpParcial2Krba\\FrmProgama.cs",
+              "Title": "FrmProgama.cs",
+              "DocumentMoniker": "C:\\Users\\Tx098\\Desktop\\457\\Segundo parcial Sis 457 krba\\Parcial2Krba\\CpParcial2Krba\\FrmProgama.cs",
               "RelativeDocumentMoniker": "CpParcial2Krba\\FrmProgama.cs",
-              "ToolTip": "C:\\Users\\Tx098\\Desktop\\Mi resplado\\Segundo parcial Sis 457 krba\\Parcial2Krba\\CpParcial2Krba\\FrmProgama.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\Tx098\\Desktop\\457\\Segundo parcial Sis 457 krba\\Parcial2Krba\\CpParcial2Krba\\FrmProgama.cs",
+              "RelativeToolTip": "CpParcial2Krba\\FrmProgama.cs",
+              "ViewState": "AgIAAKgAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-30T14:32:47.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Model.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\Tx098\\Desktop\\457\\Segundo parcial Sis 457 krba\\Parcial2Krba\\CadParcial2Krba\\Model.edmx",
+              "RelativeDocumentMoniker": "CadParcial2Krba\\Model.edmx",
+              "ToolTip": "C:\\Users\\Tx098\\Desktop\\457\\Segundo parcial Sis 457 krba\\Parcial2Krba\\CadParcial2Krba\\Model.edmx [Diagram1]",
+              "RelativeToolTip": "CadParcial2Krba\\Model.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2026-05-30T13:47:06.86Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Parcial2Krba.sql",
+              "DocumentMoniker": "C:\\Users\\Tx098\\Desktop\\457\\Segundo parcial Sis 457 krba\\Parcial2Krba.sql",
+              "RelativeDocumentMoniker": "..\\Parcial2Krba.sql",
+              "ToolTip": "C:\\Users\\Tx098\\Desktop\\457\\Segundo parcial Sis 457 krba\\Parcial2Krba.sql",
+              "RelativeToolTip": "..\\Parcial2Krba.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-05-30T13:45:55.358Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmProgama.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Tx098\\Desktop\\457\\Segundo parcial Sis 457 krba\\Parcial2Krba\\CpParcial2Krba\\FrmProgama.cs",
+              "RelativeDocumentMoniker": "CpParcial2Krba\\FrmProgama.cs",
+              "ToolTip": "C:\\Users\\Tx098\\Desktop\\457\\Segundo parcial Sis 457 krba\\Parcial2Krba\\CpParcial2Krba\\FrmProgama.cs [Dise\u00F1o]",
               "RelativeToolTip": "CpParcial2Krba\\FrmProgama.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-30T02:06:16.09Z",
+              "WhenOpened": "2026-05-30T11:34:14.69Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]

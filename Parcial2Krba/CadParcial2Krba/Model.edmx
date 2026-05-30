@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Parcial2KrbaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Parcial2KrbaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Canal">
           <Key>
             <PropertyRef Name="id" />
@@ -16,12 +16,21 @@
           <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
           <Property Name="estado" Type="smallint" Nullable="false" />
         </EntityType>
+        <EntityType Name="CategoriaPrograma">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="estado" Type="smallint" Nullable="false" />
+        </EntityType>
         <EntityType Name="Progama">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="idCanal" Type="int" Nullable="false" />
+          <Property Name="idCategoriaPrograma" Type="int" Nullable="false" />
           <Property Name="titulo" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="descripcion" Type="varchar" MaxLength="250" Nullable="false" />
           <Property Name="duracion" Type="int" Nullable="false" />
@@ -43,19 +52,35 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="fk_Progama_Categoria">
+          <End Role="CategoriaPrograma" Type="Self.CategoriaPrograma" Multiplicity="1" />
+          <End Role="Progama" Type="Self.Progama" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CategoriaPrograma">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Progama">
+              <PropertyRef Name="idCategoriaPrograma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Function Name="paProgamaListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="parametro" Type="varchar" Mode="In" />
         </Function>
         <EntityContainer Name="Parcial2KrbaModelStoreContainer">
           <EntitySet Name="Canal" EntityType="Self.Canal" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CategoriaPrograma" EntityType="Self.CategoriaPrograma" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Progama" EntityType="Self.Progama" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="fk_Progama_Canal" Association="Self.fk_Progama_Canal">
             <End Role="Canal" EntitySet="Canal" />
             <End Role="Progama" EntitySet="Progama" />
           </AssociationSet>
+          <AssociationSet Name="fk_Progama_Categoria" Association="Self.fk_Progama_Categoria">
+            <End Role="CategoriaPrograma" EntitySet="CategoriaPrograma" />
+            <End Role="Progama" EntitySet="Progama" />
+          </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Parcial2KrbaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -86,6 +111,8 @@
           <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="estado" Type="Int16" Nullable="false" />
           <NavigationProperty Name="Canal" Relationship="Self.fk_Progama_Canal" FromRole="Progama" ToRole="Canal" />
+          <Property Name="idCategoriaPrograma" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CategoriaPrograma" Relationship="Parcial2KrbaModel.fk_Progama_Categoria" FromRole="Progama" ToRole="CategoriaPrograma" />
         </EntityType>
         <Association Name="fk_Progama_Canal">
           <End Role="Canal" Type="Self.Canal" Multiplicity="1" />
@@ -107,8 +134,13 @@
             <End Role="Progama" EntitySet="Progama" />
           </AssociationSet>
           <FunctionImport Name="paProgamaListar" ReturnType="Collection(Parcial2KrbaModel.paProgamaListar_Result)">
-            <Parameter Name="parametro" Mode="In" Type="String" />
+          <Parameter Name="parametro" Mode="In" Type="String" />
           </FunctionImport>
+          <EntitySet Name="CategoriaPrograma" EntityType="Parcial2KrbaModel.CategoriaPrograma" />
+          <AssociationSet Name="fk_Progama_Categoria" Association="Parcial2KrbaModel.fk_Progama_Categoria">
+            <End Role="CategoriaPrograma" EntitySet="CategoriaPrograma" />
+            <End Role="Progama" EntitySet="Progama" />
+          </AssociationSet>
         </EntityContainer>
         <ComplexType Name="paProgamaListar_Result">
           <Property Type="Int32" Name="id" Nullable="false" />
@@ -123,6 +155,27 @@
           <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
           <Property Type="Int16" Name="estado" Nullable="false" />
         </ComplexType>
+        <EntityType Name="CategoriaPrograma">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="estado" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="Progama" Relationship="Parcial2KrbaModel.fk_Progama_Categoria" FromRole="CategoriaPrograma" ToRole="Progama" />
+        </EntityType>
+        <Association Name="fk_Progama_Categoria">
+          <End Type="Parcial2KrbaModel.CategoriaPrograma" Role="CategoriaPrograma" Multiplicity="1" />
+          <End Type="Parcial2KrbaModel.Progama" Role="Progama" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CategoriaPrograma">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Progama">
+              <PropertyRef Name="idCategoriaPrograma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -144,6 +197,7 @@
           <EntitySetMapping Name="Progama">
             <EntityTypeMapping TypeName="Parcial2KrbaModel.Progama">
               <MappingFragment StoreEntitySet="Progama">
+                <ScalarProperty Name="idCategoriaPrograma" ColumnName="idCategoriaPrograma" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="idCanal" ColumnName="idCanal" />
                 <ScalarProperty Name="titulo" ColumnName="titulo" />
@@ -174,6 +228,15 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <EntitySetMapping Name="CategoriaPrograma">
+            <EntityTypeMapping TypeName="Parcial2KrbaModel.CategoriaPrograma">
+              <MappingFragment StoreEntitySet="CategoriaPrograma">
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

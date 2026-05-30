@@ -11,12 +11,21 @@
     <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
     <Property Name="estado" Type="smallint" Nullable="false" />
   </EntityType>
+  <EntityType Name="CategoriaPrograma">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="estado" Type="smallint" Nullable="false" />
+  </EntityType>
   <EntityType Name="Progama">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="idCanal" Type="int" Nullable="false" />
+    <Property Name="idCategoriaPrograma" Type="int" Nullable="false" />
     <Property Name="titulo" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="descripcion" Type="varchar" MaxLength="250" Nullable="false" />
     <Property Name="duracion" Type="int" Nullable="false" />
@@ -38,14 +47,31 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="fk_Progama_Categoria">
+    <End Role="CategoriaPrograma" Type="Self.CategoriaPrograma" Multiplicity="1" />
+    <End Role="Progama" Type="Self.Progama" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CategoriaPrograma">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Progama">
+        <PropertyRef Name="idCategoriaPrograma" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Function Name="paProgamaListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="parametro" Type="varchar" Mode="In" />
   </Function>
   <EntityContainer Name="Parcial2KrbaModelStoreContainer">
     <EntitySet Name="Canal" EntityType="Self.Canal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CategoriaPrograma" EntityType="Self.CategoriaPrograma" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Progama" EntityType="Self.Progama" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="fk_Progama_Canal" Association="Self.fk_Progama_Canal">
       <End Role="Canal" EntitySet="Canal" />
+      <End Role="Progama" EntitySet="Progama" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Progama_Categoria" Association="Self.fk_Progama_Categoria">
+      <End Role="CategoriaPrograma" EntitySet="CategoriaPrograma" />
       <End Role="Progama" EntitySet="Progama" />
     </AssociationSet>
   </EntityContainer>

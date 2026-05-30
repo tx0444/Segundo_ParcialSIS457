@@ -20,6 +20,7 @@ namespace CpParcial2Krba
         private void FrmProgama_Load(object sender, EventArgs e)
         {
             cargarCanal();
+            cargarCategoria();
             configurarTabla();
             listar();
             mostrarFormulario(false);
@@ -53,9 +54,11 @@ namespace CpParcial2Krba
 
             if (dgvLista.Columns["id"] != null) dgvLista.Columns["id"].Visible = false;
             if (dgvLista.Columns["idCanal"] != null) dgvLista.Columns["idCanal"].Visible = false;
+            if (dgvLista.Columns["idCategoriaPrograma"] != null) dgvLista.Columns["idCategoriaPrograma"].Visible = false;
             if (dgvLista.Columns["estado"] != null) dgvLista.Columns["estado"].Visible = false;
 
             cambiarEncabezado("canal", "Canal");
+            cambiarEncabezado("categoria", "Categoria");
             cambiarEncabezado("titulo", "Titulo");
             cambiarEncabezado("descripcion", "Descripcion");
             cambiarEncabezado("duracion", "Duracion");
@@ -66,6 +69,7 @@ namespace CpParcial2Krba
 
             if (dgvLista.Columns["descripcion"] != null) dgvLista.Columns["descripcion"].FillWeight = 170;
             if (dgvLista.Columns["titulo"] != null) dgvLista.Columns["titulo"].FillWeight = 130;
+            if (dgvLista.Columns["categoria"] != null) dgvLista.Columns["categoria"].FillWeight = 90;
             if (dgvLista.Columns["duracion"] != null) dgvLista.Columns["duracion"].FillWeight = 70;
             if (dgvLista.Columns["fechaEstreno"] != null)
                 dgvLista.Columns["fechaEstreno"].DefaultCellStyle.Format = "dd/MM/yyyy";
@@ -92,6 +96,14 @@ namespace CpParcial2Krba
             cbxCanal.SelectedIndex = -1;
         }
 
+        private void cargarCategoria()
+        {
+            cbxCategoria.DataSource = CategoriaProgramaCln.listar();
+            cbxCategoria.ValueMember = "id";
+            cbxCategoria.DisplayMember = "nombre";
+            cbxCategoria.SelectedIndex = -1;
+        }
+
         private void mostrarFormulario(bool mostrar)
         {
             pnlFormulario.Visible = mostrar;
@@ -113,6 +125,7 @@ namespace CpParcial2Krba
             txtDescripcion.Clear();
             txtProductor.Clear();
             cbxCanal.SelectedIndex = -1;
+            cbxCategoria.SelectedIndex = -1;
             nudDuracion.Value = 1;
             dtpFechaEstreno.Value = DateTime.Today;
             resetearErrores();
@@ -123,6 +136,7 @@ namespace CpParcial2Krba
             erpTitulo.Clear();
             erpDescripcion.Clear();
             erpCanal.Clear();
+            erpCategoria.Clear();
             erpDuracion.Clear();
             erpProductor.Clear();
         }
@@ -162,6 +176,7 @@ namespace CpParcial2Krba
             txtDescripcion.Text = progama.descripcion;
             txtProductor.Text = progama.productor;
             cbxCanal.SelectedValue = progama.idCanal;
+            cbxCategoria.SelectedValue = progama.idCategoriaPrograma;
             nudDuracion.Value = progama.duracion;
             dtpFechaEstreno.Value = progama.fechaEstreno;
 
@@ -199,6 +214,11 @@ namespace CpParcial2Krba
                 erpCanal.SetError(cbxCanal, "El canal es obligatorio");
                 esValido = false;
             }
+            if (cbxCategoria.SelectedIndex < 0)
+            {
+                erpCategoria.SetError(cbxCategoria, "La categoria es obligatoria");
+                esValido = false;
+            }
             if (nudDuracion.Value <= 0)
             {
                 erpDuracion.SetError(nudDuracion, "La duracion debe ser mayor a cero");
@@ -218,6 +238,7 @@ namespace CpParcial2Krba
                 descripcion = txtDescripcion.Text.Trim(),
                 productor = txtProductor.Text.Trim(),
                 idCanal = (int)cbxCanal.SelectedValue,
+                idCategoriaPrograma = (int)cbxCategoria.SelectedValue,
                 duracion = (int)nudDuracion.Value,
                 fechaEstreno = dtpFechaEstreno.Value.Date,
                 usuarioRegistro = usuarioRegistro
@@ -262,6 +283,11 @@ namespace CpParcial2Krba
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void dgvLista_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
