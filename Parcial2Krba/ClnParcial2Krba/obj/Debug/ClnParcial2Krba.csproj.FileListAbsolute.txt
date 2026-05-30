@@ -1,0 +1,15 @@
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\ClnParcial2Krba\bin\Debug\ClnParcial2Krba.dll.config
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\ClnParcial2Krba\bin\Debug\ClnParcial2Krba.dll
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\ClnParcial2Krba\bin\Debug\ClnParcial2Krba.pdb
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\ClnParcial2Krba\bin\Debug\CadParcial2Krba.dll
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\ClnParcial2Krba\bin\Debug\EntityFramework.dll
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\ClnParcial2Krba\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\ClnParcial2Krba\bin\Debug\CadParcial2Krba.pdb
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\ClnParcial2Krba\bin\Debug\CadParcial2Krba.dll.config
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\ClnParcial2Krba\bin\Debug\EntityFramework.xml
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\ClnParcial2Krba\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\ClnParcial2Krba\obj\Debug\ClnParcial2Krba.csproj.AssemblyReference.cache
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\ClnParcial2Krba\obj\Debug\ClnParcial2Krba.csproj.CoreCompileInputs.cache
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\ClnParcial2Krba\obj\Debug\ClnParci.6E3C6263.Up2Date
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\ClnParcial2Krba\obj\Debug\ClnParcial2Krba.dll
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\ClnParcial2Krba\obj\Debug\ClnParcial2Krba.pdb

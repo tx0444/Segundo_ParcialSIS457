@@ -1,0 +1,42 @@
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\CpParcial2Krba\obj\Debug\CpParcial2Krba.csproj.AssemblyReference.cache
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\CpParcial2Krba\obj\Debug\CpParcial2Krba.FrmProgama.resources
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\CpParcial2Krba\obj\Debug\CpParcial2Krba.csproj.GenerateResource.cache
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\CpParcial2Krba\obj\Debug\CpParcial2Krba.Properties.Resources.resources
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\CpParcial2Krba\bin\Debug\CpParcial2Krba.exe.config
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\CpParcial2Krba\bin\Debug\CpParcial2Krba.exe
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\CpParcial2Krba\bin\Debug\CpParcial2Krba.pdb
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\CpParcial2Krba\bin\Debug\CadParcial2Krba.dll
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\CpParcial2Krba\bin\Debug\ClnParcial2Krba.dll
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\CpParcial2Krba\bin\Debug\EntityFramework.dll
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\CpParcial2Krba\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\CpParcial2Krba\bin\Debug\CadParcial2Krba.pdb
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\CpParcial2Krba\bin\Debug\CadParcial2Krba.dll.config
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\CpParcial2Krba\bin\Debug\ClnParcial2Krba.pdb
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\CpParcial2Krba\bin\Debug\ClnParcial2Krba.dll.config
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\CpParcial2Krba\bin\Debug\EntityFramework.xml
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\CpParcial2Krba\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\CpParcial2Krba\obj\Debug\CpParcial2Krba.csproj.CoreCompileInputs.cache
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\CpParcial2Krba\obj\Debug\CpParcia.303ED650.Up2Date
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\CpParcial2Krba\obj\Debug\CpParcial2Krba.exe
+C:\Users\Tx098\Desktop\457\sis457_2026_1\Parcial2Krba\CpParcial2Krba\obj\Debug\CpParcial2Krba.pdb
+C:\Users\Tx098\Desktop\457\Segundo parcial Sis 457 krba\Parcial2Krba\CpParcial2Krba\bin\Debug\CpParcial2Krba.exe.config
+C:\Users\Tx098\Desktop\457\Segundo parcial Sis 457 krba\Parcial2Krba\CpParcial2Krba\bin\Debug\CpParcial2Krba.exe
+C:\Users\Tx098\Desktop\457\Segundo parcial Sis 457 krba\Parcial2Krba\CpParcial2Krba\bin\Debug\CpParcial2Krba.pdb
+C:\Users\Tx098\Desktop\457\Segundo parcial Sis 457 krba\Parcial2Krba\CpParcial2Krba\bin\Debug\CadParcial2Krba.dll
+C:\Users\Tx098\Desktop\457\Segundo parcial Sis 457 krba\Parcial2Krba\CpParcial2Krba\bin\Debug\ClnParcial2Krba.dll
+C:\Users\Tx098\Desktop\457\Segundo parcial Sis 457 krba\Parcial2Krba\CpParcial2Krba\bin\Debug\EntityFramework.dll
+C:\Users\Tx098\Desktop\457\Segundo parcial Sis 457 krba\Parcial2Krba\CpParcial2Krba\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tx098\Desktop\457\Segundo parcial Sis 457 krba\Parcial2Krba\CpParcial2Krba\bin\Debug\CadParcial2Krba.pdb
+C:\Users\Tx098\Desktop\457\Segundo parcial Sis 457 krba\Parcial2Krba\CpParcial2Krba\bin\Debug\CadParcial2Krba.dll.config
+C:\Users\Tx098\Desktop\457\Segundo parcial Sis 457 krba\Parcial2Krba\CpParcial2Krba\bin\Debug\ClnParcial2Krba.pdb
+C:\Users\Tx098\Desktop\457\Segundo parcial Sis 457 krba\Parcial2Krba\CpParcial2Krba\bin\Debug\ClnParcial2Krba.dll.config
+C:\Users\Tx098\Desktop\457\Segundo parcial Sis 457 krba\Parcial2Krba\CpParcial2Krba\bin\Debug\EntityFramework.xml
+C:\Users\Tx098\Desktop\457\Segundo parcial Sis 457 krba\Parcial2Krba\CpParcial2Krba\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tx098\Desktop\457\Segundo parcial Sis 457 krba\Parcial2Krba\CpParcial2Krba\obj\Debug\CpParcial2Krba.csproj.AssemblyReference.cache
+C:\Users\Tx098\Desktop\457\Segundo parcial Sis 457 krba\Parcial2Krba\CpParcial2Krba\obj\Debug\CpParcial2Krba.FrmProgama.resources
+C:\Users\Tx098\Desktop\457\Segundo parcial Sis 457 krba\Parcial2Krba\CpParcial2Krba\obj\Debug\CpParcial2Krba.Properties.Resources.resources
+C:\Users\Tx098\Desktop\457\Segundo parcial Sis 457 krba\Parcial2Krba\CpParcial2Krba\obj\Debug\CpParcial2Krba.csproj.GenerateResource.cache
+C:\Users\Tx098\Desktop\457\Segundo parcial Sis 457 krba\Parcial2Krba\CpParcial2Krba\obj\Debug\CpParcial2Krba.csproj.CoreCompileInputs.cache
+C:\Users\Tx098\Desktop\457\Segundo parcial Sis 457 krba\Parcial2Krba\CpParcial2Krba\obj\Debug\CpParcia.303ED650.Up2Date
+C:\Users\Tx098\Desktop\457\Segundo parcial Sis 457 krba\Parcial2Krba\CpParcial2Krba\obj\Debug\CpParcial2Krba.exe
+C:\Users\Tx098\Desktop\457\Segundo parcial Sis 457 krba\Parcial2Krba\CpParcial2Krba\obj\Debug\CpParcial2Krba.pdb
